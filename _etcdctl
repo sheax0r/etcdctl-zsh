@@ -1,4 +1,5 @@
 #compdef etcdctl
+alias etcdctl etc
 
 _etcdctl() {
   _arguments \

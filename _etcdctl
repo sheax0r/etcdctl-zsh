@@ -1,19 +1,17 @@
 #compdef etcdctl
-alias etcdctl etc
-
+#autoload
 _etcdctl() {
   _arguments \
     "1:Commands:(mk mkdir rm rmdir get ls set setdir update updatedir watch exec-watch help)" \
     "2: :->path"
 
-case $#words in
+  case $#words in
   3) 
-    compadd "$@" $(etcd_completions $words[3])
+    compadd "$@" $(etcd_completions $words[2] $words[3])
   esac
 }
 
 function etcd_completions {
-  input=${1%/*}
-  echo `etcdctl ls --recursive $input`
+  echo `etcd-completion $1 $2`
 }
 

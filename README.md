@@ -2,24 +2,29 @@
 This is an etcdctl autocomplete plugin for oh-my-zsh.
 
 ## Installation
-#### 1. Clone the git repository into your custom plugins directory:
-```bash
-git clone https://github.com/sheax0r/etcdctl-oh-my-zsh.git ~/.zsh/custom/plugins/etcdctl
-```
 
-#### 2. Install the etcd-completion rubygem:
+First, install the etcd-completion rubygem. 
 ```
 gem install etcd-completion
 ```
+The next step varies depending on how you use zsh. Instructions included for antigen and oh-my-zsh.
 
-#### 3. Include the plugin in your .zshrc, along with your other plugins:
+### Antigen Install:
+Install the bundle by editing your .zshrc file:
 ```bash
-plugins=(git vagrant etcdctl)
+antigen bundle sheax0r/etcdctl-zsh
 ```
 
-#### 4. Restart your shell:
+### Oh-my-zsh Install:
+
+#### 1. Clone the git repository into your custom plugins directory:
+```bash
+git clone https://github.com/sheax0r/etcdctl-zsh.git ~/.zsh/custom/plugins/etcdctl-zsh
 ```
-exec $SHELL
+
+#### 2. Include the plugin in your .zshrc, along with your other plugins:
+```bash
+plugins=(...git vagrant etcdctl-zsh...)
 ```
 
 ## Usage

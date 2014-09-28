@@ -23,6 +23,6 @@ exec $SHELL
 ```
 
 ## Usage
-* Use etcdctl as usual: ```etc <command> <path>```
+* Use etcdctl as usual: ```etcdctl <command> <path>```
 * Autocompletion will function on commands.
 * Autocompletion will function on paths too.
